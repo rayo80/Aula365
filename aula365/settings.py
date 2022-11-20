@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-m0q#l$10q+74=z5p8x(amh&gle$q7mgo@vohg+d+$u7=&a*l!o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+CORS_ALLOW_ALL_ORIGINS = True
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,6 +54,8 @@ THIRD_APPS = [
 INSTALLED_APPS = LOCAL_APPS + BASE_APPS + THIRD_APPS
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -135,3 +139,20 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%Y-%m-%dT%H:%M:%S.%f-05:00',
+    'DATE_INPUT_FORMATS': [
+        '%Y-%m-%dT%H:%M:%S.%f-05:00',
+        '%Y-%m-%dT%H:%M:%S.%fZ',
+        '%Y-%m-%d'
+    ],
+    'DATETIME_INPUT_FORMATS': [
+        '%Y-%m-%dT%H:%M:%S.%f-05:00',
+        '%Y-%m-%dT%H:%M:%S.%fZ',
+        '%Y-%m-%dT%H:%M:%S',
+        '%Y-%m-%dT%H:%M',
+        '%Y-%m-%d %H:%M:%S',
+        '%Y-%m-%d'
+    ],
+}
