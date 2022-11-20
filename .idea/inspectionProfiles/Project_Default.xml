@@ -1,0 +1,28 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyMethodMayBeStaticInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="django" />
+            <item index="1" class="java.lang.String" itemvalue="pillow" />
+            <item index="2" class="java.lang.String" itemvalue="ddf" />
+            <item index="3" class="java.lang.String" itemvalue="django-rest-framework" />
+            <item index="4" class="java.lang.String" itemvalue="django-dynamic-fixture" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypedDictInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="purchases.tests.test_serializer_purchase.ddf" />
+          <option value="inventario.models.get_ancestors" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
