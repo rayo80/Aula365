@@ -2,7 +2,7 @@ from rest_framework.routers import DefaultRouter
 import matricula.api.viewsets as mav
 
 
-router = DefaultRouter()
+router = DefaultRouter(trailing_slash=False)
 
 router.register(r'profesor', mav.TeacherViewSet, basename='profesor')
 router.register(r'inscripcion', mav.InscriptionViewSet, basename='inscripcion')
