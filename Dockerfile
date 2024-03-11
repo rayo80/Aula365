@@ -9,4 +9,4 @@ ADD . /app
 
 WORKDIR /app
 EXPOSE 8080
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--timeout", "300", "aula.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--timeout", "300", "aula365.wsgi"]
